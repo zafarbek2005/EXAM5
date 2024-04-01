@@ -1,4 +1,5 @@
 const wrapper = document.querySelector('.api-cards');
+const loading = document.querySelector('.loading');
 
 fetch("https://dummyjson.com/products")
   .then(response => response.json())
@@ -33,52 +34,12 @@ fetch("https://dummyjson.com/products")
   })
   .catch(error => {
     console.error('Xatolik yuz berdi:', error);
+  })
+  .finally(() => {
+    loading.style.display = 'none';
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// RESPONSIV  NAVBAR
+// RESPONSIVE NAVBAR
 function toggleNavbar() {
   document.getElementById("navbar-responsive").classList.toggle("open");
 }
@@ -108,5 +69,12 @@ function shrink() {
   }
 }
 
+const backtop = document.querySelector(".backtop");
 
-
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= 500) {
+    backtop.style.bottom = "40px";
+  } else {
+    backtop.style.bottom = "-40px";
+  }
+});

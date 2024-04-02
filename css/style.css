@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
 }
@@ -86,7 +87,7 @@ header .bottom-header .navbar .logo .sm-logo {
   display: none;
 }
 header .bottom-header .navbar .logo #idlg {
-  margin-left: -110px;
+  margin-left: -65px;
 }
 header .bottom-header .navbar .logo a h1 {
   color: var(--Black, #0d0d0d);
@@ -102,6 +103,7 @@ header .bottom-header .navbar .logo .nav-link {
   align-items: center;
   justify-content: space-between;
   width: 900px;
+  padding-left: 70px;
 }
 header .bottom-header .navbar .logo .nav-link ul {
   display: flex;
@@ -223,11 +225,12 @@ body .container1 {
 body .bd-1 {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 180px;
   margin-left: -68px;
+  width: 100%;
   max-width: 1200px;
-  height: 344px;
   top: 172px;
   left: 135px;
   gap: 0px;
@@ -420,7 +423,9 @@ body #h33 {
   text-align: left;
 }
 body .btr {
-  padding-left: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 70px;
 }
 body .btr button {
@@ -998,20 +1003,214 @@ body .ppq {
   letter-spacing: 0%;
 }
 
-.car {
-  margin-left: -1250px;
-  margin-top: 80px;
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: -150px;
+  padding-bottom: 150px;
+  padding-right: 80px;
+  width: clamp(400px, 100%, 1200px);
+}
+.game .g1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
-  padding-bottom: 100px;
+  gap: 5px;
+  margin-top: 100px;
+}
+.game .g1 img {
+  background: #F5F5F5;
+  width: 170px;
+  height: 138px;
+}
+.game .g2 img {
+  width: 450px;
+  top: 323px;
+  left: 335px;
+  padding: 154px 27px 131px 27px;
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
+}
+.game .havic {
+  padding-top: 300px;
+  padding-left: -200px;
+}
+.game .havic h3 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-bottom: 16px;
+}
+.game .havic h6 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  width: 97px;
+  height: 24px;
+  top: 400px;
+  left: 905px;
+  gap: 0px;
+  opacity: 0px;
+  padding-top: 13px;
+  padding-bottom: 53px;
+}
+.game .havic p {
+  width: 373px;
+  height: 63px;
+  top: 448px;
+  left: 905px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  padding-bottom: 23px;
+}
+.game .havic .line {
+  margin-top: 23px;
+  /* Line 1 */
+  width: 370px;
+  height: 0;
+  left: 0;
+  top: -0.5px;
+  /* Text2 */
+  border: 1px solid rgb(0, 0, 0);
+}
+.game .havic .colur {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.game .havic .colur p {
+  /* Heading/20PX Regular */
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 3%;
+  text-align: left;
+}
+.game .havic .Size {
+  display: flex;
+  align-items: center;
+}
+.game .havic .Size p {
+  /* Heading/20PX Regular */
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 3%;
+  text-align: left;
+}
+.game .havic .btnss {
+  display: flex;
+  align-items: center;
+  padding-left: 70px;
+  margin-top: -65px;
+  gap: 6px;
+}
+.game .havic .btnss button {
+  width: 32px;
+  height: 32px;
+  padding: 6px 0px 6px 0px;
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: gray;
+}
+.game .havic .btnss button:hover {
+  border-radius: 4px;
+  color: #fff;
+  background: rgb(219, 68, 68);
+}
+.game .havic .buy-gl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+.game .havic .buy-gl button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 48px 10px 48px;
+  border-radius: 4px;
+  background: rgb(219, 68, 68);
+  border: none;
+  color: #fff;
+}
+.game .havic .buy-gl button:hover {
+  background: rgb(252, 85, 85);
+  transform: scale(0.9);
+}
+.game .havic .buy-gl #lovee {
+  width: 40px;
+  height: 40px;
+  top: 661px;
+  left: 1265px;
+  padding: 4px 0px 0px 0px;
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background: #fff;
+  border: gray;
+}
+.game .havic .buy-gl #lovee:hover {
+  background: red;
+  color: #fff;
+}
+.game .havic .delivery-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.game .havic .delivery-section .free-delivery, .game .havic .delivery-section .return-delivery {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 399px;
+}
+.game .havic .delivery-section .free-delivery h2, .game .havic .delivery-section .return-delivery h2 {
+  width: 199px;
+}
+.game .havic .delivery-section .free-delivery p, .game .havic .delivery-section .return-delivery p {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration-line: underline;
+}
+.game .havic .delivery-section .free-delivery p a, .game .havic .delivery-section .return-delivery p a {
+  color: blue;
+  text-decoration: none;
+}
+.game .havic .delivery-section .free-delivery p a:hover, .game .havic .delivery-section .return-delivery p a:hover {
+  text-decoration: underline;
 }
 
-.haciq {
-  position: relative;
-  top: -600px;
-  left: 500px;
+.uy {
+  padding-top: 200px;
 }
 
 .backtop {
@@ -1026,6 +1225,10 @@ body .ppq {
   border: none;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   transition: 0.5s linear;
+}
+.backtop a {
+  text-decoration: none;
+  color: #000;
 }
 
 footer {
@@ -1180,6 +1383,14 @@ footer .bottom #save {
   footer .logos {
     display: none;
   }
+  footer .browse {
+    transform: translate(-50%, -50%) !important;
+  }
+  footer .bd-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 768px) {
   footer .top .links {
@@ -1190,6 +1401,17 @@ footer .bottom #save {
   footer .logos {
     display: none;
   }
+  footer .browse {
+    text-align: center;
+  }
+  footer .browse {
+    transform: translate(-50%, -50%) !important;
+  }
+  footer .bd-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 398px) {
   footer .top .links {
@@ -1199,5 +1421,16 @@ footer .bottom #save {
   }
   footer .logos {
     display: none;
+  }
+  footer .browse {
+    text-align: center;
+  }
+  footer .browse {
+    transform: translate(-50%, -50%) !important;
+  }
+  footer .bd-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

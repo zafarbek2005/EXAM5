@@ -9,15 +9,15 @@ fetch("https://dummyjson.com/products")
       data.products = [data.products]; 
     }
   
-    data.products.slice(0, 8).forEach(product => { 
+    data.products.slice(1, 9).forEach(product => { 
       const card = document.createElement('div');
       card.classList.add('card');
       card.innerHTML = `
       <div class="api-cards2">  
-      <div class="product-card">
-        <img src="${product.thumbnail}" alt="">
+      <div data-id="${product.id}" class="product-card">
+        <img name='product-image' src="${product.thumbnail}" alt="">
         <img id="heart" src="./img/heart small.svg" alt="">
-        <img id="koz" src="./img/koz.svg" alt="">
+        <img name = "product-wish" id="koz" src="./img/koz.svg" alt="">
       </div>
       <div class="star">
         <h3 id="h33">${product.brand}</h3>
@@ -38,6 +38,79 @@ fetch("https://dummyjson.com/products")
   .finally(() => {
     loading.style.display = 'none';
   });
+
+
+  const setWish = async (id) =>{
+    let  getData = await fetch(`${API_URL}/${id}`)
+    getData
+    .json()
+    .then((res) => {
+        let wishes = JSON.parse(localStorage.getItem("wishes")) || [];
+        let index = wishes.findIndex(el => el.id === +id);
+        if (index < 0) {
+         localStorage.setItem('wishes',JSON.stringify([...wishes,res]))
+        } 
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+
+wrapper.addEventListener('click', (e) => {
+  const productCard = e.target.closest('.product-card');
+  if (!productCard) return; 
+
+  const productId = productCard.dataset.id;
+  window.location.href = `pages/single.html?id=${productId}`; 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // RESPONSIVE NAVBAR
 function toggleNavbar() {
